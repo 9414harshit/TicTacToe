@@ -4,8 +4,6 @@ using namespace std;
 
 char tic[3][3];
 int l,r;
-int count=9;
-
 void print(){
     for(int i=0;i<3;i++) {
         for(int j=0;j<3;j++) 
@@ -20,7 +18,6 @@ bool check(char a){
     if(tic[l-1][r-1]!='-') 
 	{
 		std::cout << "Wrong input" << std::endl;
-		count++;
     	return 0;
     }
     tic[l-1][r-1]=a;       // update the tic array
@@ -79,6 +76,7 @@ bool check(char a){
 int main() {
 	// your code goes here
     memset(tic,'-',sizeof(tic));
+    int count=9;
     bool res=0;
 
     while(count--){
@@ -101,4 +99,3 @@ int main() {
     if(res==0) std::cout << "No Winner" << std::endl;
 	return 0;
 }
-
